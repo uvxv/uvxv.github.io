@@ -821,6 +821,7 @@ main {
   background: var(--text-gradient-yellow);
   border-radius: 50%;
   box-shadow: 0 0 0 4px var(--jet);
+  animation: myAnimation 800ms linear infinite;
 }
 
 .timeline-text {
@@ -1879,4 +1880,19 @@ textarea.form-input::-webkit-resizer { display: none; }
 
   .timeline-text { max-width: 700px; }
 
+}
+
+
+@keyframes myAnimation {
+  0% {
+    opacity: 0;
+  }
+  50% {
+    opacity: .75;
+    transform: scale(1.5);
+  }
+  100% {
+    opacity: .1;
+    transform: scale(10);
+  }
 }
