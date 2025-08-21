@@ -824,6 +824,36 @@ main {
   animation: myAnimation 800ms linear infinite;
 }
 
+.timeline-item.ping::after {
+  content: "";
+  position: absolute;
+  top: 5px;
+  left: -33px;
+  height: 8px;
+  width: 8px;
+  background: var(--text-gradient-yellow);
+  border-radius: 50%;
+  box-shadow: 0 0 0 4px var(--jet);
+  animation: ping 1.2s infinite;
+  
+}
+
+
+@keyframes ping {
+  0% {
+    box-shadow: 
+                0 0 0 4px rgba(255, 221, 0, 0.6);
+  }
+  70% {
+    box-shadow: 
+                0 0 0 8px rgba(255, 221, 0, 0);
+  }
+  100% {
+    box-shadow: 
+                0 0 0 4px rgba(255, 221, 0, 0);
+  }
+
+
 .timeline-text {
   color: var(--light-gray);
   font-weight: var(--fw-300);
@@ -1638,6 +1668,11 @@ textarea.form-input::-webkit-resizer { display: none; }
   .form-btn {
     width: max-content;
     margin-left: auto;
+  }
+
+    .timeline-item.ping::after{
+      top: 5px;
+      left: -43px;
   }
   
 }
